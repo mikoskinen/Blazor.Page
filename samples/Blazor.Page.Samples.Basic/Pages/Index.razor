@@ -1,0 +1,28 @@
+﻿@page "/"
+@inherits Page
+
+<h2>Blazor.Page demos for changing and getting the title</h2>
+
+<input @bind="NewTitle" type="text" watermark="Enter new title" />
+<button @onclick="Update" class="btn btn-primary">Update</button>
+<br />
+
+<h4>Current title is:</h4>
+<p>@CurrentTitle</p>
+
+@code{
+
+    public string NewTitle { get; set; }
+    public string CurrentTitle { get; set; }
+
+    public void Update()
+    {
+        this.Title = NewTitle;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool isFirst)
+    {
+        CurrentTitle = await GetTitle();
+        StateHasChanged();
+    }
+}

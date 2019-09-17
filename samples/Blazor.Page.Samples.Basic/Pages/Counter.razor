@@ -1,0 +1,28 @@
+﻿@page "/counter"
+@inherits Page<CounterPageModel>
+
+<h2>Page with datacontext sample</h2>
+
+<h4>List of customers:</h4>
+@if (DataContext.Customers?.Any() == true)
+{
+    <table>
+        <thead>
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var customer in DataContext.Customers)
+            {
+            <tr>
+                <td>@customer.FirstName</td>
+                <td>@customer.LastName</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
+<br />
+<input type="button" class="btn btn-primary" value="Add customer" @onclick="@(() => DataContext.AddCustomer(new Customer() { FirstName = Guid.NewGuid().ToString(), LastName = Guid.NewGuid().ToString() }))" />

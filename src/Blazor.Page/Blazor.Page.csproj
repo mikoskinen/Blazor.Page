@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RazorLangVersion>3.0</RazorLangVersion>
+    <IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Mikael Koskinen</Authors>
+    <Company />
+    <Description>Page base component for Blazor pages. Easily update page title and optionally inject datacontext into your page</Description>
+    <PackageProjectUrl>https://github.com/mikoskinen/Blazor.Page</PackageProjectUrl>
+    <PackageId>Page.Blazor</PackageId>
+    <Product>Page.Blazor</Product>
+    <AssemblyName>Page.Blazor</AssemblyName>
+    <RootNamespace>Blazor.Page</RootNamespace>
+    <PackageLicenseUrl>https://github.com/mikoskinen/Blazor.Page/blob/master/LICENSE</PackageLicenseUrl>
+    <Version>1.0.0-rc1</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.0.0-rc1.19457.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.0.0-rc1.19457.4" />
+  </ItemGroup>
+
+</Project>
