@@ -8,7 +8,7 @@ Blazor.Page is a Blazor component, designed to be used as the base component for
 * Ability to set and get page title
 * (Optionally) Ability to set data context for your page. Data context can be used similar to ViewModels in MVVM or similar to PageModels in Razor Pages.
 
-This release has been tested with the server side version of .NET Core v3.0.0-rc1 Blazor.
+This release has been tested only with the server side version of .NET Core v3.0.0 Blazor. It hasn't been fully tested with the WebAssembly-version of Blazor but there's no known issues.
 
 [![NuGet](https://img.shields.io/nuget/v/Page.Blazor.svg)](https://www.nuget.org/packages/Page.Blazor/)
 
@@ -55,6 +55,6 @@ Blazor doesn’t currently support “native” or built-in way of changing the 
 ## Requirements ##
 The library has been developed and tested using the following tools:
 
-.NET Core 3.0 RC 1
-Visual Studio 2019 Preview
+.NET Core 3.0
+Visual Studio 2019
 Server side Blazor
